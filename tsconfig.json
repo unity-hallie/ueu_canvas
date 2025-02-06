@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "target": "esNext",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "declaration": true,
+    "declarationMap": true,
+    "outDir": "./dist",
+
+    "types": [
+      "jest",
+      "@testing-library/jest-dom"
+    ],
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "@canvas/*": [
+        "./*"
+      ]
+    },
+    "sourceMap": true,
+    "allowJs": true,
+    "skipLibCheck": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "es2020",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": false,
+    "emitDeclarationOnly": false,
+    "jsx": "react-jsx"
+  },
+  "include": [
+    "src",
+    "tests",
+  ]
+}
