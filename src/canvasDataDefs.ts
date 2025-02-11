@@ -3,7 +3,7 @@ export type CanvasData = Record<string, any> & {
 }
 
 
-export interface IEnrollmentData extends CanvasData {
+export interface HasUser extends CanvasData {
     user: IUserData
 }
 

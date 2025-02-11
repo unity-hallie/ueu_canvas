@@ -11,7 +11,7 @@ export * from "./rubricTypes";
 
 
 export * from './canvasDataDefs';
-
+export * from './enrollments';
 export * from './term';
 export * from './content';
 export * from './course';
@@ -25,3 +25,5 @@ export * from './date';
 export * from './types';
 export * from './fetch';
 export * from './canvasUtils';
+
+export * as mocks from './__mocks__'

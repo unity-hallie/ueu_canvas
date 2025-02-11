@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "assert": "^2.1.0",
+    "redux-persist": "^6.0.0",
     "temporal-polyfill": "^0.2.5"
   }
 }

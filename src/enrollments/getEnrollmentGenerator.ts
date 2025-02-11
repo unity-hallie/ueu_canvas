@@ -1,30 +1,7 @@
 import {getPagedDataGenerator} from "@/fetch/getPagedDataGenerator";
-import {IEnrollmentData, IUserData} from "@/canvasDataDefs";
+import {HasUser} from "@/canvasDataDefs";
 import {EnrollmentRole} from "@/enrollments/enrollmentRole";
-
-
-export type EnrollmentType = 'StudentEnrollment' |
-    'TeacherEnrollment' |
-    'DesignerEnrollment' |
-    'ObserverEnrollment'
-
-
-export type EnrollmentState = 'active' |
-    'invited' |
-    'creation_pending' |
-    'deleted' |
-    'rejected' |
-    'completed' |
-    'inactive' |
-    'current_and_invited' |
-    'current_and_future' |
-    'current_and_future_and_restricted' |
-    'current_and_concluded'
-
-export type EnrollmentUserState =  EnrollmentState | 'current_and_invited' |
-    'current_and_future' |
-    'current_and_future_and_restricted' |
-    'current_and_concluded'
+import {EnrollmentData, EnrollmentState, EnrollmentType, EnrollmentUserState} from "@/enrollments/EnrollmentTypes";
 
 
 export type EnrollmentInclude = 'avatar_url' |
@@ -79,7 +56,7 @@ export type GetEnrollmentCourseGenConfig = {
 export type GetEnrollmentGenConfig = GetEnrollmentUserGenConfig | GetEnrollmentCourseGenConfig | GetEnrollmentSectionGenConfig;
 
 
-export const getEnrollmentGenerator = ({} , config: GetEnrollmentGenConfig) => {
+export const getEnrollmentGenerator = ( config: GetEnrollmentGenConfig) => {
     let url: string;
 
 
@@ -96,7 +73,7 @@ export const getEnrollmentGenerator = ({} , config: GetEnrollmentGenConfig) => {
 
 
 
-    return getPagedDataGenerator<IEnrollmentData[]>(url, {
+    return getPagedDataGenerator<EnrollmentData>(url, {
         queryParams,
     });
 }
