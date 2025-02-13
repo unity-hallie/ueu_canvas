@@ -1,4 +1,7 @@
 /package-lock.json
+/.vs/*
+/node_modules/*
+/dist/*
 /.idea/inspectionProfiles/profiles_settings.xml
 /.idea/jsLibraryMappings.xml
 /.idea/misc.xml

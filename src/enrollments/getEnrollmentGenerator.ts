@@ -62,11 +62,11 @@ export const getEnrollmentGenerator = ( config: GetEnrollmentGenConfig) => {
 
     const { queryParams, ...internalParams } = config;
     if ('userId' in config) {
-        url = `/api/v1/accounts/${config.userId}/users`;
+        url = `/api/v1/users/${config.userId}/enrollments`;
     } else if ('courseId' in config) {
-        url = `/api/v1/courses/${config.courseId}/users`;
+        url = `/api/v1/courses/${config.courseId}/enrollments`;
     } else  if ('sectionId' in config) {
-        url = `/api/v1/sections/${config.sectionId}/users`;
+        url = `/api/v1/sections/${config.sectionId}/enrollments`;
     } else {
         throw new Error('config type not recognized')
     }
